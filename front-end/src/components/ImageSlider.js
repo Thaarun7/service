@@ -15,9 +15,9 @@ function ImageSlider() {
 	};
 	return (
 		<Carousel {...setting}>
-			<Warp>
+			{/* <Warp>
 				<img src='/img/3b191d1c-df4b-432f-a721-b5aafeee0b68.jpg' alt='' />
-			</Warp>
+			</Warp> */}
 			<Warp>
 				<img src='/img/43ea2415-5b67-43df-b577-265ec4ebe57e.jpg' alt='' />
 			</Warp>
@@ -55,7 +55,8 @@ const Warp = styled.div`
 		border: 1px solid transparent;
 		border-radius: 10px;
 		width: 100%;
-		height: 550px;
+		opacity: 0.8;
+		height: 100%;
 		box-shadow: rgb(0 0 0 /69%) 0px 26px 30px -10px,
 			rgb(0 0 0 /73%) 0px 16px 10px -10px;
 

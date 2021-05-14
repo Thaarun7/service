@@ -20,9 +20,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 15vw;
-	margin-right: 100px;
+
+	margin-right: 50px;
 }
 .header__icons {
 	color: #1c1919;
+	align-items: center;
+	text-decoration: none;
+	font-size: 20px;
+	width: 8vw;
 }

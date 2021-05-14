@@ -2,6 +2,7 @@ import React from 'react';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import { Avatar } from '@material-ui/core';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
 	return (
@@ -12,12 +13,14 @@ function Header() {
 				alt=''
 			/>
 			<div className='header__right'>
-				<div className='header__icons'>
+				<Link href to='/order' className=' header__icons'>
 					<MailOutlineIcon />
-				</div>
-				<div className='header__icons'>
+					
+				</Link>
+
+				<Link href to='/login' className='header__icons'>
 					<Avatar />
-				</div>
+				</Link>
 			</div>
 		</div>
 	);
