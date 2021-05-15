@@ -1,19 +1,30 @@
 {
-  "name": "service",
-  "version": "1.0.0",
-  "description": "service-station",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Thaarun7/service.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Thaarun7/service/issues"
-  },
-  "homepage": "https://github.com/Thaarun7/service#readme"
+	"name": "service",
+	"version": "1.0.0",
+	"description": "service-station",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"server": "nodemon Back-end/server",
+		"client": "npm start --prefix front-end",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Thaarun7/service.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Thaarun7/service/issues"
+	},
+	"homepage": "https://github.com/Thaarun7/service#readme",
+	"dependencies": {
+		"dotenv": "^9.0.2",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"concurrently": "^6.1.0",
+		"nodemon": "^2.0.7"
+	}
 }

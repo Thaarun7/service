@@ -1,6 +1,7 @@
 .card {
-	padding: 10%;
-	border-radius: 20%;
+	padding-top: 60px;
+	padding-left: 10vw;
+	padding-right: 10vw;
 }
 .card__heading1 {
 	background-color: #1c1919;
@@ -15,11 +16,9 @@
 h2 {
 	margin-right: 50px;
 }
-h3 {
-	font-size: 25px;
-}
-h6 {
+h5 {
 	font-size: 20px;
+	width: 100%;
 }
 .details {
 	padding: 0px;

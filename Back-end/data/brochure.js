@@ -1,4 +1,3 @@
-
 const brochures = [
 	{
 		_id: '1',
@@ -15,4 +14,4 @@ const brochures = [
 	},
 ];
 
-module.exports = brochures;
+export default brochures;
