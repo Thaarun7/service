@@ -1,18 +1,32 @@
 .card {
-	padding: 200px;
+	padding: 10%;
 	border-radius: 20%;
 }
 .card__heading1 {
 	background-color: #1c1919;
 	color: antiquewhite;
-	padding: 10px;
+	padding: 1px;
+	padding-left: 30px;
 	margin-top: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
+h2 {
+	margin-right: 50px;
+}
+h3 {
+	font-size: 25px;
+}
+h6 {
+	font-size: 20px;
+}
 .details {
 	padding: 0px;
 	margin: 0px;
 	display: flex;
+	align-items: center;
+	margin-left: 50px;
 	justify-content: space-between;
 }
 .button {

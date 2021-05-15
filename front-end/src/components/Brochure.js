@@ -7,17 +7,19 @@ function Brochure() {
 		<div className='card'>
 			<Card>
 				<div className='card1'>
-					<h1 className='card__heading1'>Gendral Service</h1>
+					<div className='card__heading1'>
+						<h1>Gendral Service</h1>
+						<h2>99</h2>
+					</div>
 
 					<div className='details'>
-						<h3>
-							gendral service include with
-							<ol>
-								<li>oil change</li>
-								<li>water service</li>
-							</ol>
-						</h3>
-						<Button className="button">book</Button>
+						<div>
+							<h3>gendral service include with</h3>
+							<h6></h6>
+						</div>
+						<div className='button'>
+							<Button>book</Button>
+						</div>
 					</div>
 				</div>
 			</Card>
