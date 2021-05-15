@@ -7,7 +7,9 @@
 	"scripts": {
 		"server": "nodemon Back-end/server",
 		"client": "npm start --prefix front-end",
-		"dev": "concurrently \"npm run server\" \"npm run client\""
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"data:import": "node Back-end/seeder",
+		"data:destroy": "node Back-end/seeder -d"
 	},
 	"repository": {
 		"type": "git",
@@ -20,8 +22,11 @@
 	},
 	"homepage": "https://github.com/Thaarun7/service#readme",
 	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"colors": "^1.4.0",
 		"dotenv": "^9.0.2",
 		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
 		"mongoose": "^5.12.9"
 	},
 	"devDependencies": {

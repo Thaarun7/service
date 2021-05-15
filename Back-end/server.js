@@ -1,26 +1,18 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import brochures from './data/brochure.js';
-import connectDB from './config/db.js'
+import connectDB from './config/db.js';
+import brochureRoutes from './routes/brochureRoutes.js';
 
 dotenv.config();
 
-connectDB()
+connectDB();
 
 const app = express();
 
 app.get('/', (req, res) => {
 	res.send('API is running...');
 });
-
-app.get('/api/brochures', (req, res) => {
-	res.json(brochures);
-});
-
-// app.get('/api/products/:id', (req, res) => {
-// 	const product = products.find((p) => p._id == req.params.id);
-// 	res.json(product);
-// });
+app.use('/api/brochures', brochureRoutes);
 
 const PORT = process.env.PORT || 5000;
 

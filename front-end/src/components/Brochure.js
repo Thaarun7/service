@@ -9,14 +9,13 @@ function Brochure({ bro }) {
 			<Card>
 				<div className='card1'>
 					<div className='card__heading1'>
-						<h1>{bro.serviceHeading}</h1>
+						<h1>{bro.heading}</h1>
 						<h2>{bro.price}</h2>
 					</div>
 
-
 					<div className='details'>
 						<div>
-							<h5>{bro.serviceDescription}</h5>
+							<h5>{bro.description}</h5>
 						</div>
 						<div className='button'>
 							<Link href to='/onkn'>
