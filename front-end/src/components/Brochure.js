@@ -12,6 +12,7 @@ function Brochure({ bro }) {
 						<h1>{bro.serviceHeading}</h1>
 						<h2>{bro.price}</h2>
 					</div>
+					<h1>hello</h1>
 
 					<div className='details'>
 						<div>
