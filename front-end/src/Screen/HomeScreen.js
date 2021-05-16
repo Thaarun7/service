@@ -1,32 +1,38 @@
 import React from 'react';
-import { useState } from 'react';
 import { useEffect } from 'react';
 import Brochure from '../components/Brochure';
 import ImageSlider from '../components/ImageSlider';
 import './HomeScreen.css';
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import Message from '../components/Message';
+import Loader from '../components/Message';
+import { listBrochures } from '../actions/brochureAction';
 
 const Home = () => {
-	const [brochures, setBrochures] = useState([]);
+	const dispatch = useDispatch();
+	const brochureList = useSelector((state) => state.brochureList);
+	const { loading, error, brochures } = brochureList;
 
 	useEffect(() => {
-		const fetchBrochures = async () => {
-			const { data } = await axios.get('/api/brochures');
-
-			setBrochures(data);
-		};
-		fetchBrochures();
-	}, []);
+		dispatch(listBrochures());
+	}, [dispatch]);
 
 	return (
 		<>
 			<div className='home'>
 				<ImageSlider />
 				<h1 className='home__heading1'>Shedule your service</h1>
-
-				{brochures.map((bro) => (
-					<Brochure key={bro._id} bro={bro} />
-				))}
+				{loading ? (
+					<Loader />
+				) : error ? (
+					<Message variant='danger'>{error}</Message>
+				) : (
+					<div>
+						{brochures.map((bro) => (
+							<Brochure key={bro._id} bro={bro}></Brochure>
+						))}
+					</div>
+				)}
 			</div>
 		</>
 	);
