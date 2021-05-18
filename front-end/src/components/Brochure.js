@@ -18,9 +18,7 @@ function Brochure({ bro }) {
 							<h5>{bro.description}</h5>
 						</div>
 						<div className='button'>
-							<Link href to='/onkn'>
-								<Button>book</Button>
-							</Link>
+							<Button>book</Button>
 						</div>
 					</div>
 				</div>
