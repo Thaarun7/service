@@ -18,7 +18,7 @@ const orderSchema = mongoose.Schema(
 				},
 			},
 		],
-		detais: {
+		serviceDetail: {
 			brand: { type: String, required: true },
 			model: { type: String, required: true },
 			regNumber: { type: Number, required: true },

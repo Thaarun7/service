@@ -1,9 +1,10 @@
 import { Button, Card } from '@material-ui/core';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import './Brochure.css';
 
 function Brochure({ bro }) {
+	const history = useHistory();
 	return (
 		<div className='card'>
 			<Card>
@@ -18,7 +19,12 @@ function Brochure({ bro }) {
 							<h5>{bro.description}</h5>
 						</div>
 						<div className='button'>
-							<Button>book</Button>
+							<Button
+								onClick={() =>
+									history.push('/login?redirect=details', { from: '/' })
+								}>
+								book
+							</Button>
 						</div>
 					</div>
 				</div>
